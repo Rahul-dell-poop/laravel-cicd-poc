@@ -20,7 +20,7 @@ class OrderFlowTest extends TestCase
             'password' => 'password',
         ]);
 
-        $registerResponse->assertStatus(500);
+        $registerResponse->assertStatus(200);
         $token = $registerResponse->json('token');
         $userId = $registerResponse->json('user.id');
 
